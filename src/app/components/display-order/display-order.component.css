@@ -1,0 +1,129 @@
+.heading{
+    text-align: center;
+    background-color: #6AB04A;
+    padding: 2px;
+    color: #e4d0d0;
+    
+
+    
+}
+table{
+    margin-top: 10px;
+    border-collapse: collapse;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+table thead tr{
+    background-color: #009879;
+    color: #ffffff;
+    text-align: left;
+    font-weight: bold;
+    font-size: 25px;
+    
+}
+th,td{
+    padding: 12px 15px;
+    border-right: 2px solid #e4d0d0;
+}
+tbody tr{
+    border-bottom: 1px solid #dddddd;
+    
+}
+
+tbody tr:nth-of-type(even){
+    background-color: #f3f3f3;
+}
+
+tbody tr:last-of-type{
+    border-bottom: 2px solid #009879;
+    
+}
+tbody tr:hover{
+    background-color: #009826;
+    color: #dddddd;
+    
+}
+
+#btn{
+    width: 100%;
+    height: 30px;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+    background:#E44236;
+    font-size: 20px;
+    border-radius: 5px;
+}
+#btn:hover{
+    background-color:#2475B0;
+    transform: translateY(0px) scale(1.1);
+  box-shadow: 0 5px 5px 5px rgba(0, 0, 0, 0.3);
+  z-index: 1;
+    
+}
+#btn:focus{
+    outline :none;
+}
+.form{
+    width: 40%;
+    margin: 10px auto 50px auto;
+    background-color: #2ecc72;
+    padding: 25px;
+    /* height: 300px; */
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+    
+
+}
+.form h3{
+    text-align: center;
+    font-size: 30px;
+    color: #E71C23;
+}
+#submit{
+   
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    color: #ffffff;
+    background:#E44236;
+    font-size: 20px;
+    border-radius: 5px;
+    margin: 10px;
+}
+.submit{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+input[type=text], select {
+    width: 100%;
+    padding: 8px;
+    /* margin: 8px 0; */
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 18px;
+    color:#ffffff;
+    background-color: #4C4B4B;
+  }
+  label{
+      font-size: 20px;
+      color: #4C4B4B;
+      height: 50px;
+  }
+    input[type=submit]:focus,input[type=text]:focus,select:focus{
+    outline :none;
+  }
+  .tablehide{
+      display: none;
+  }
+  .formhide{
+    display: none;
+  }

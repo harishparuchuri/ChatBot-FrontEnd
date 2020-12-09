@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="bgimg">
+  <img src="../../../assets/images/Pizza.jpg" alt="">
+</div>
+<input type="checkbox" id="click" />
+<label for="click">
+  <i class="bot" id="icon"><img src="../../../assets/images/bot2.png" alt=""width="55px" height="55px"></i>
+  <i class="fas">x</i>
+</label>
+<div class="wrapper">
+  <div class="head-text">PizzaBot</div>
+  <div class="chat-box chat-height" id="chatcontainer">
+    <!-- id-chatcontainer-->
+    <!-- ChatMessages   -->
+  </div>
+  <div class="chat-type show-type">
+    <!--disptype-->
+    <hr class="row" />
+    <div class="input-div">
+      <input class="input-message" name="message" type="text" id="message" placeholder="Type your message ..."
+        autocomplete="off" #data >
+
+      <button class="input-send" id="msgsenda" (click)="UserMessage(data.value)" (click)="removetext()">
+        <svg style="width: 24px; height: 24px" id="msgsend">
+          <path d="M2,21L23,12L2,3V10L17,12L2,14V21Z" />
+        </svg>
+      </button>
+    </div>
+  </div>
+</div>
+</div>

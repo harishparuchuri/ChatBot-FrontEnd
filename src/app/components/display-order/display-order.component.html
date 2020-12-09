@@ -1,0 +1,51 @@
+<div class="heading">
+    <h1>Order Details</h1>
+</div>
+<div class="form formhide">
+    <h3 >Update Order Details</h3>
+    <form>
+        <label for="fname">Order ID</label>
+        <input type="text" id="orderid"  #orderid disabled>
+        <!-- <input type="text"> -->
+    
+        <label for="lname">Item Name</label>
+        <input type="text" id="itemname"  disabled>
+    
+        <label for="OrderStatus">Order Status</label>
+        <input type="text" id="OrderStatus" name="OrderStatus" #orderstatus>
+        <!-- <select id="OrderStatus" name="OrderStatus">
+          <option value="australia">Australia</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select> -->
+        <div class="submit">
+        <button id="submit" (click)="Submit()" (click)="UpdateStatus(orderid.value,orderstatus.value)">Update</button>
+    </div>
+        <!-- <input type="submit" value="Submit"> -->
+      </form>
+</div>
+<div class="details">
+<table>
+    <thead>
+        <tr>
+        <th>OrderId</th>
+        <th>itemName</th>
+        <th>Price</th>
+        <th>UserEmailId</th>
+        <th>OrderStatus</th>
+        <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let order of OrderDetails">
+            <td class="data">{{order.OrderId}}</td>
+            <td class="data">{{order.itemName}}</td>
+            <td class="data">{{order.Price}}</td>
+            <td class="data">{{order.UserEmailId}}</td>
+            <td class="data">{{order.OrderStatus}}</td>
+            <td class="button"><button id="btn" (click)="Update(order.OrderId,order.itemName,order.OrderStatus)">Update</button></td>
+        </tr>
+
+    </tbody>
+</table>
+</div>
