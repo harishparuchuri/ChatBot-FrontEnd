@@ -33,6 +33,9 @@ export class BotComponent implements OnInit {
     this.container.scrollTop = this.container.scrollHeight;
   }
   ngOnInit(): void {
+    var x = <HTMLInputElement>document.getElementById("click");
+    
+      x.checked = true;
     this.OptionsApi();
     this.DataApi();
     
@@ -83,6 +86,7 @@ export class BotComponent implements OnInit {
                     chatask.innerHTML =data;
                     await this.sleep(1500);
                     document.getElementById('chatcontainer').appendChild(chatask);
+                    this.GetDate("datebot");
                     this.ngAfterViewInit();
   }
   removetext() {
@@ -141,6 +145,7 @@ export class BotComponent implements OnInit {
                     this.hideinput();
                     this.ngAfterViewInit();
                       this.BotMsgText(data[0].OrderStatus);
+
                       this.ngAfterViewInit();
                       await this.sleep(5000);
                       this.BotMessage(1);
@@ -169,7 +174,7 @@ export class BotComponent implements OnInit {
               // console.log(Aoption);
               if (HandleEvent == 0) {
                 // console.log(Aoption.value);
-                let regexpNumber = new RegExp(/[0-9]+/);
+                let regexpNumber = new RegExp(/^([1-5])$/);
                 if(regexpNumber.test(Aoption.value)){
                   this.OrderData.Quantity = Aoption.value;
                 await this.sleep(1500);
@@ -370,9 +375,10 @@ export class BotComponent implements OnInit {
    GetDate(className:string){
     let date=new Date();
     let Hour=date.getHours()>12?date.getHours()-12:date.getHours();
-    let AP=date.getHours()>12?"PM":"AM";
-    let day=["sun","mon","tue","Wed","Fri","Sat"];
-    let Time=day[date.getDay()]+" "+Hour+":"+date.getMinutes()+" "+AP;
+    let AP=date.getHours()>=12?"PM":"AM";
+    let min=date.getMinutes()>9?date.getMinutes():"0"+date.getMinutes();
+    let day=["sun","mon","tue","Wed","thu","Fri","Sat"];
+    let Time=day[date.getDay()]+" "+Hour+":"+min+" "+AP;
     var InsertDate = document.createElement('div');
           InsertDate.classList.add(className);
           InsertDate.classList.add('activated');
