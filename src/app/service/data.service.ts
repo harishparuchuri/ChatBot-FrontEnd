@@ -7,17 +7,19 @@ import { Observable } from 'rxjs';
 })
 export class DataService {
 
-  private DataUrl="https://backendchatbot.herokuapp.com/message";
-  private UserUrl="https://backendchatbot.herokuapp.com/user";
-  private OrderUrl="https://backendchatbot.herokuapp.com/order";
-  private OptionUrl="https://backendchatbot.herokuapp.com/options";
-  private Order="https://backendchatbot.herokuapp.com/order";
+  private DataUrl=  "https://harishchatbotbackend.herokuapp.com/message" || "https://backendchatbot.herokuapp.com/message";
+  private UserUrl=  "https://harishchatbotbackend.herokuapp.com/user"    ||"https://backendchatbot.herokuapp.com/user";
+  private OrderUrl= "https://harishchatbotbackend.herokuapp.com/order"  ||"https://backendchatbot.herokuapp.com/order";
+  private OptionUrl="https://harishchatbotbackend.herokuapp.com/options" ||"https://backendchatbot.herokuapp.com/options";
+  private Order=     "https://harishchatbotbackend.herokuapp.com/order"  ||"https://backendchatbot.herokuapp.com/order";
   
+
 
   constructor(private http:HttpClient) { }
 
   getData():Observable<any>{
     return this.http.get(this.DataUrl);
+    
   }
   getOptions():Observable<any>{
     return this.http.get(this.OptionUrl);
